@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Brush Script MT', cursive;
+            flex-direction: column;
+        }
+        h1 {
+            font-size: 5em;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        .toggle-paragraph {
+            background-color: #fff;
+            color: pink;
+            padding: 14px 20px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .toggle-paragraph:hover {
+            background-color: #ff80bf;
+            color: white;
+        }
+        .hidden-paragraph {
+            display: none;
+            margin-top: 20px;
+            background-color: white;
+            color: pink;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1>About Me</h1>
+
+    <button class="toggle-paragraph" onclick="toggleParagraph('about-alexandria')">About Alexandria</button>
+    <div id="about-alexandria" class="hidden-paragraph">
+        <p>
+            <!-- Put your story about Alexandria here. -->
+        </p>
+    </div>
+
+    <button class="toggle-paragraph" onclick="toggleParagraph('certifications')">Certifications</button>
+    <div id="certifications" class="hidden-paragraph">
+        <p>
+            <!-- Put your list of certifications or stories here. -->
+        </p>
+    </div>
+
+    <script>
+        function toggleParagraph(id) {
+            var paragraph = document.getElementById(id);
+            if (paragraph.style.display === "none" || paragraph.style.display === "") {
+                paragraph.style.display = "block";
+            } else {
+                paragraph.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
